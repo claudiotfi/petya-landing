@@ -13,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className="bg-red-50 text-slate-900">
+      <body className="bg-slate-100 text-slate-900">
         {/* Background decorativo global */}
         <div className="absolute inset-0 -z-10">
           <div className="absolute -top-32 -right-32 w-[500px] h-[500px] bg-teal-500/30 rounded-full blur-3xl"></div>
