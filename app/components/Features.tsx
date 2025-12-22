@@ -1,28 +1,57 @@
-
-import { Heart, Share2, FileText, Clock, Shield, Zap } from 'lucide-react';
+import { Folder, Share2, ShieldCheck, Clock } from 'lucide-react'
 
 export function Features() {
-    return (
-        <section className="relative z-10 px-12 py-16 bg-gradient-to-br from-gray-50 to-blue-50">
-            <h2 className="text-4xl font-bold text-center mb-12">Por que escolher Petya</h2>
-            <div className="grid grid-cols-3 gap-8">
-                {[
-                    { icon: FileText, title: 'Histórico Completo', desc: 'Vacinas, exames e documentos em um único lugar', color: 'from-blue-500 to-cyan-500' },
-                    { icon: Share2, title: 'Compartilhamento Fácil', desc: 'Envie histórico para veterinários em segundos', color: 'from-amber-500 to-orange-500' },
-                    { icon: Shield, title: 'Seguro e Confiável', desc: 'Seus dados protegidos com encriptação', color: 'from-blue-500 to-cyan-500' },
-                    { icon: Clock, title: 'Acesso Rápido', desc: 'Informações sempre à mão em emergências', color: 'from-violet-500 to-purple-600' },
-                    { icon: Zap, title: 'Fácil de Usar', desc: 'Interface intuitiva sem complicações', color: 'from-amber-500 to-orange-500' },
-                    { icon: Heart, title: 'Saúde Melhor', desc: 'Histórico organizado = melhor cuidado', color: 'from-blue-500 to-cyan-500' }
-                ].map((feature, i) => (
-                    <div key={i} className="bg-white rounded-2xl p-8 hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 cursor-pointer group">
-                        <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                            <feature.icon className="text-white" size={32} />
-                        </div>
-                        <h3 className="text-2xl font-bold mb-3">{feature.title}</h3>
-                        <p className="text-gray-600">{feature.desc}</p>
-                    </div>
-                ))}
-            </div>
-        </section>
-    )
+  return (
+    <section className="py-32 bg-white text-slate-900">
+      <div className="max-w-7xl mx-auto px-6">
+        <h2 className="text-4xl font-extrabold text-center mb-16">
+          Pensado para o cuidado contínuo
+        </h2>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <Feature
+            icon={Folder}
+            title="Tudo organizado"
+            color="text-emerald-600"
+          />
+          <Feature
+            icon={Share2}
+            title="Compartilhável"
+            color="text-sky-600"
+          />
+          <Feature
+            icon={ShieldCheck}
+            title="Seguro"
+            color="text-orange-500"
+          />
+          <Feature
+            icon={Clock}
+            title="Sempre à mão"
+            color="text-indigo-600"
+          />
+        </div>
+      </div>
+    </section>
+  )
 }
+
+function Feature({
+  icon: Icon,
+  title,
+  color,
+}: {
+  icon: React.ElementType
+  title: string
+  color: string
+}) {
+  return (
+    <div className="p-8 rounded-3xl bg-slate-50 hover:bg-slate-100 transition">
+      <Icon className={`w-10 h-10 ${color} mb-4`} />
+      <h3 className="font-bold text-xl mb-2">{title}</h3>
+      <p className="text-slate-600">
+        Informações claras e acessíveis.
+      </p>
+    </div>
+  )
+}
+

@@ -1,19 +1,21 @@
-'use client'
-
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
 import { Features } from './components/Features'
 import { Cta } from './components/Cta'
 import { Footer } from './components/Footer'
+import { HowItWorks } from './components/HowItWorks'
 
-export default function PetyaLanding() {
+export default function Home() {
   return (
-    <div>
+    <>
       <Header />
-      <Hero />
-      <Features />
-      <Cta />
+      <main>
+        <Hero />
+        <HowItWorks />
+        <Features />
+        <Cta />
+      </main>
       <Footer />
-    </div>
-  );
+    </>
+  )
 }

@@ -1,60 +1,95 @@
-import { Heart, Share2, FileText, ArrowRight } from 'lucide-react';
+import {
+  HeartPulse,
+  Syringe,
+  FileText,
+  Pill,
+} from 'lucide-react'
 
 export function Hero() {
-    return (
-        <section className="relative z-10 px-12 py-20 grid grid-cols-2 gap-12 items-center">
-            <div>
-                <div className="inline-block px-4 py-2 bg-blue-200 text-blue-600 rounded-full text-sm font-semibold mb-6">
-                    🐾 Saúde do seu pet centralizada
-                </div>
-                <h1 className="text-6xl font-bold mb-6 leading-tight text-black">
-                    <span className="bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent">Organize todo o histórico de saúde do seu pet em um só lugar</span>
-                </h1>
-                <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                    Vacinas, exames, documentos e histórico clínico sempre à mão. Compartilhe com veterinários quando precisar. Nunca mais perca informações importantes.
-                </p>
-                <div className="flex gap-4">
-                    <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full font-semibold hover:shadow-xl transform hover:scale-105 transition-all flex items-center gap-2">
-                        Entrar na lista <ArrowRight size={20} />
-                    </button>
-                    <button className="px-8 py-4 bg-white text-gray-700 rounded-full font-semibold border-2 border-gray-200 hover:border-blue-600 hover:text-blue-600 transition-all">
-                        Saiba mais
-                    </button>
-                </div>
+  return (
+    <section className="relative min-h-screen flex items-center pt-32 overflow-hidden text-slate-900">
+      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+        {/* Texto principal */}
+        <div>
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-100 text-emerald-700 font-semibold mb-6">
+            <HeartPulse className="w-4 h-4" />
+            Saúde veterinária organizada
+          </span>
+
+          <h1 className="text-5xl font-extrabold leading-tight mb-6">
+            O histórico de saúde do seu pet, &nbsp;
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-sky-600">
+              sempre acessível
+            </span>
+          </h1>
+
+          <p className="text-xl text-slate-600 mb-10">
+            Centralize vacinas, exames, documentos e procedimentos.
+            Tenha tudo à mão em consultas ou emergências.
+          </p>
+
+          <div className="flex flex-wrap gap-4">
+            <button className="px-8 py-4 rounded-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-bold text-lg hover:scale-105 transition">
+              Quero acesso antecipado
+            </button>
+
+            <a
+              href="#how-it-works"
+              className="px-8 py-4 rounded-full border border-slate-400 bg-slate-300 text-slate-700 font-semibold hover:border-sky-600 hover:text-sky-800 transition inline-flex items-center justify-center"
+            >
+              Como funciona
+            </a>
+
+
+          </div>
+        </div>
+
+        {/* Visual mock */}
+        <div className="relative">
+          <div className="rounded-3xl bg-white shadow-2xl p-8 border border-slate-200">
+            <div className="flex items-center justify-between mb-6">
+              <p className="font-semibold text-slate-700">
+                Histórico do Pet
+              </p>
+              <span className="text-sm text-emerald-600 font-semibold">
+                Atualizado
+              </span>
             </div>
 
-            {/* Cards em coluna */}
             <div className="space-y-4">
-                <div className="bg-gradient-to-br from-violet-50 to-purple-50 border border-violet-200 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group flex items-start gap-4">
-                    <div className="bg-gradient-to-br from-violet-500 to-purple-600 rounded-xl p-4 flex-shrink-0 group-hover:scale-110 transition-transform">
-                        <FileText className="text-white" size={32} />
-                    </div>
-                    <div className="flex-1">
-                        <h3 className="text-lg font-bold text-gray-900 mb-2">Vacinas, exames e documentos</h3>
-                        <p className="text-gray-600">Acesso instantâneo ao histórico completo do seu pet</p>
-                    </div>
+              <div className="flex items-center gap-4 p-4 rounded-xl bg-slate-50">
+                <Syringe className="w-6 h-6 text-emerald-600" />
+                <div>
+                  <p className="font-semibold">Vacina V10</p>
+                  <p className="text-sm text-slate-500">
+                    Aplicada há 3 meses
+                  </p>
                 </div>
+              </div>
 
-                <div className="bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-200 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group flex items-start gap-4">
-                    <div className="bg-gradient-to-br from-amber-500 to-orange-500 rounded-xl p-4 flex-shrink-0 group-hover:scale-110 transition-transform">
-                        <Share2 className="text-white" size={32} />
-                    </div>
-                    <div className="flex-1">
-                        <h3 className="text-lg font-bold text-gray-900 mb-2">Compartilhe com veterinários</h3>
-                        <p className="text-gray-600">Facilite consultas e emergências com informações completas</p>
-                    </div>
+              <div className="flex items-center gap-4 p-4 rounded-xl bg-slate-50">
+                <FileText className="w-6 h-6 text-sky-600" />
+                <div>
+                  <p className="font-semibold">Exame de sangue</p>
+                  <p className="text-sm text-slate-500">
+                    Resultado anexado
+                  </p>
                 </div>
+              </div>
 
-                <div className="bg-gradient-to-br from-teal-50 to-cyan-50 border border-teal-200 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group flex items-start gap-4">
-                    <div className="bg-gradient-to-br from-teal-500 to-cyan-500 rounded-xl p-4 flex-shrink-0 group-hover:scale-110 transition-transform">
-                        <Heart className="text-white" size={32} />
-                    </div>
-                    <div className="flex-1">
-                        <h3 className="text-lg font-bold text-gray-900 mb-2">Nunca perca informações</h3>
-                        <p className="text-gray-600">Tudo seguro e organizado em um único lugar</p>
-                    </div>
+              <div className="flex items-center gap-4 p-4 rounded-xl bg-slate-50">
+                <Pill className="w-6 h-6 text-rose-500" />
+                <div>
+                  <p className="font-semibold">Medicação contínua</p>
+                  <p className="text-sm text-slate-500">
+                    Uso diário
+                  </p>
                 </div>
+              </div>
             </div>
-        </section>
-    )
+          </div>
+        </div>
+      </div>
+    </section>
+  )
 }
