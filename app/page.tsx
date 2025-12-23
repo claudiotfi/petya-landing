@@ -15,7 +15,6 @@ export default function Home() {
         <HowItWorks />
         <Cta />
         <Features />
-        
         <ContactForm />
       </main>
       <Footer />
