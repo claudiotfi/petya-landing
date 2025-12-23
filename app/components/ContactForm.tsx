@@ -1,0 +1,179 @@
+'use client'
+
+import { useEffect, useRef, useState } from 'react'
+
+const ENDPOINT = 'https://formspree.io/f/xxxxxxxxxx'
+
+export function ContactForm() {
+  const formRef = useRef<HTMLFormElement | null>(null)
+
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+  const [loading, setLoading] = useState(false)
+
+  const [success, setSuccess] = useState(false)
+  const [error, setError] = useState(false)
+  const [showForm, setShowForm] = useState(true)
+
+  const [countdown, setCountdown] = useState(10)
+
+  useEffect(() => {
+    if (!showForm) {
+      setCountdown(10)
+
+      const timer = setInterval(() => {
+        setCountdown((prev) => {
+          if (prev <= 1) {
+            clearInterval(timer)
+            resetFlow()
+            return 0
+          }
+          return prev - 1
+        })
+      }, 1000)
+
+      return () => clearInterval(timer)
+    }
+  }, [showForm])
+
+  function resetFlow() {
+    setShowForm(true)
+    setSuccess(false)
+    setError(false)
+    setEmail('')
+    setMessage('')
+  }
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault()
+    setLoading(true)
+    setSuccess(false)
+    setError(false)
+
+    try {
+      if (!formRef.current) return
+
+      const formData = new FormData(formRef.current)
+
+      const res = await fetch(ENDPOINT, {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: formData,
+      })
+
+      const data = await res.json()
+
+      if (!res.ok) {
+        console.error('Formspree error:', data)
+        setError(true)
+      } else {
+        setSuccess(true)
+      }
+
+      setShowForm(false)
+    } catch (err) {
+      console.error(err)
+      setError(true)
+      setShowForm(false)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  return (
+    <section
+      id="waiting-list"
+      className="py-16 bg-gradient-to-b from-slate-300 via-white to-slate-300"
+    >
+      <div className="max-w-4xl mx-auto px-6 text-center">
+
+        <h2 className="text-3xl font-bold mb-4">Acesso antecipado ao Petya</h2>
+        <p className="text-lg text-slate-600 mb-4">
+            Cadastre-se para ser um dos primeiros a usar o Petya e nunca mais perder
+            informações importantes. Sem spam, prometemos.
+        </p>
+
+        {showForm ? (
+            <form
+            ref={formRef}
+            onSubmit={handleSubmit}
+            className="space-y-6"
+            aria-label="Formulário de contato"
+            >
+            <input type="hidden" name="_subject" value="Novo contato via site Vertex" />
+
+            {/* MENSAGEM */}
+            <div>
+                <label htmlFor="message" className="block text-gray-500 text-start text-sm mb-1">
+                Nome
+                </label>
+                <input
+                id="message"
+                name="message"
+                required
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                className="w-full p-3 rounded-lg border border-teal-500 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500 outline-none"
+                placeholder="Seu nome"
+                />
+            </div>
+
+            {/* EMAIL */}
+            <div>
+                <label htmlFor="email" className="block text-gray-500 text-start text-sm mb-1">
+                Seu e-mail
+                </label>
+                <input
+                id="email"
+                name="_replyto"
+                type="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="w-full p-3 rounded-lg border border-teal-500 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500 outline-none"
+                placeholder="seuemail@exemplo.com"
+                />
+            </div>
+
+            {/* HONEYPOT */}
+            <input
+                type="text"
+                name="_gotcha"
+                className="hidden"
+                tabIndex={-1}
+                autoComplete="off"
+            />
+
+            {/* BOTÃO */}
+            <button
+                type="submit"
+                disabled={loading}
+                className="w-full px-6 py-3 mt-3 rounded-full bg-gradient-to-r from-emerald-600 to-sky-600 text-white font-semibold hover:scale-105 transition"
+            >
+                {loading ? 'Enviando...' : 'Entrar na lista'}
+            </button>
+            </form>
+        ) : (
+            <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 shadow-lg text-center space-y-4">
+            {success && (
+                <p className="text-green-400 text-lg font-semibold">
+                Obrigado! Sua mensagem foi enviada.
+                </p>
+            )}
+
+            {error && (
+                <p className="text-red-400 text-lg font-semibold">
+                Ocorreu um erro ao enviar o formulário.
+                </p>
+            )}
+
+            <p className="text-gray-400">
+                Você poderá enviar outra mensagem em{' '}
+                <span className="font-bold text-cyan-400">{countdown}</span> segundos.
+            </p>
+            </div>
+        )}
+        </div>
+    </section>
+  )
+}

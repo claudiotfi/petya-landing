@@ -9,7 +9,7 @@ import {
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center pt-32 overflow-hidden text-slate-900">
+    <section className="relative min-h-screen flex items-center pt-32 overflow-hidden text-slate-900" id="hero">
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
         {/* Texto principal */}
         <div>
@@ -30,24 +30,19 @@ export function Hero() {
             Tenha tudo à mão em consultas ou emergências.
           </p>
 
-          <div className="flex flex-wrap gap-4">
-            <button className="px-8 py-4 rounded-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-bold text-lg hover:scale-105 transition">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <a href="#waiting-list" className="px-8 py-4 rounded-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-bold text-lg hover:scale-105 transition">
               Quero acesso antecipado
-            </button>
-
+            </a>
             <a
               href="#how-it-works"
               className="px-8 py-4 rounded-full border border-slate-400 text-slate-700 font-semibold hover:border-sky-600 hover:text-sky-800 transition inline-flex items-center justify-center"
-            >
-              Como funciona
-            </a>
-
-
+            >Como funciona</a>
           </div>
         </div>
 
         {/* Visual mock */}
-        <div className="relative">
+        <div className="relative my-6">
           <div className="rounded-3xl bg-white shadow-2xl p-8 border border-slate-200">
             <div className="flex items-center justify-between mb-6">
               <p className="font-semibold text-slate-700 flex">
