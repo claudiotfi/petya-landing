@@ -3,6 +3,8 @@ import {
   Syringe,
   FileText,
   Pill,
+  NotebookTabs,
+  Check,
 } from 'lucide-react'
 
 export function Hero() {
@@ -11,8 +13,8 @@ export function Hero() {
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
         {/* Texto principal */}
         <div>
-          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-100 text-emerald-700 font-semibold mb-6">
-            <HeartPulse className="w-4 h-4" />
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-emerald-600 font-semibold mb-6 shadow-sm">
+            <HeartPulse className="w-4 h-4 text-emerald-600" />
             Saúde veterinária organizada
           </span>
 
@@ -35,7 +37,7 @@ export function Hero() {
 
             <a
               href="#how-it-works"
-              className="px-8 py-4 rounded-full border border-slate-400 bg-slate-300 text-slate-700 font-semibold hover:border-sky-600 hover:text-sky-800 transition inline-flex items-center justify-center"
+              className="px-8 py-4 rounded-full border border-slate-400 text-slate-700 font-semibold hover:border-sky-600 hover:text-sky-800 transition inline-flex items-center justify-center"
             >
               Como funciona
             </a>
@@ -48,11 +50,11 @@ export function Hero() {
         <div className="relative">
           <div className="rounded-3xl bg-white shadow-2xl p-8 border border-slate-200">
             <div className="flex items-center justify-between mb-6">
-              <p className="font-semibold text-slate-700">
-                Histórico do Pet
+              <p className="font-semibold text-slate-700 flex">
+                <NotebookTabs className="w-5 h-5 me-2" /> Histórico do Pet
               </p>
-              <span className="text-sm text-emerald-600 font-semibold">
-                Atualizado
+              <span className="text-sm text-emerald-600 font-semibold flex">
+                Atualizado <Check className="w-4 h-5 ms-1" />
               </span>
             </div>
 
@@ -68,7 +70,7 @@ export function Hero() {
               </div>
 
               <div className="flex items-center gap-4 p-4 rounded-xl bg-slate-50">
-                <FileText className="w-6 h-6 text-sky-600" />
+                <FileText className="w-6 h-6 text-cyan-600" />
                 <div>
                   <p className="font-semibold">Exame de sangue</p>
                   <p className="text-sm text-slate-500">
@@ -78,7 +80,7 @@ export function Hero() {
               </div>
 
               <div className="flex items-center gap-4 p-4 rounded-xl bg-slate-50">
-                <Pill className="w-6 h-6 text-rose-500" />
+                <Pill className="w-6 h-6 text-yellow-500" />
                 <div>
                   <p className="font-semibold">Medicação contínua</p>
                   <p className="text-sm text-slate-500">
