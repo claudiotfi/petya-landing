@@ -104,25 +104,19 @@ export function ContactForm() {
 
             {/* MENSAGEM */}
             <div>
-                <label htmlFor="message" className="block text-gray-500 text-start text-sm mb-1">
-                Nome
-                </label>
                 <input
                 id="message"
                 name="message"
                 required
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                className="w-full p-3 rounded-lg border border-teal-500 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500 outline-none"
+                className="w-full px-6 py-3 rounded-full border border-teal-500 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500 outline-none"
                 placeholder="Seu nome"
                 />
             </div>
 
             {/* EMAIL */}
             <div>
-                <label htmlFor="email" className="block text-gray-500 text-start text-sm mb-1">
-                Seu e-mail
-                </label>
                 <input
                 id="email"
                 name="_replyto"
@@ -130,7 +124,7 @@ export function ContactForm() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full p-3 rounded-lg border border-teal-500 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500 outline-none"
+                className="w-full px-6 py-3 rounded-full border border-teal-500 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500 outline-none"
                 placeholder="seuemail@exemplo.com"
                 />
             </div>
@@ -148,7 +142,7 @@ export function ContactForm() {
             <button
                 type="submit"
                 disabled={loading}
-                className="w-full px-6 py-4 mt-3 rounded-full bg-gradient-to-r from-emerald-600 to-sky-600 text-white font-semibold hover:scale-105 transition"
+                className="w-full px-6 py-4 rounded-full bg-gradient-to-r from-emerald-600 to-sky-600 text-white font-semibold hover:scale-105 transition cursor-pointer disabled:cursor-not-allowed"
             >
                 {loading ? 'Enviando...' : 'Entrar na lista'}
             </button>
