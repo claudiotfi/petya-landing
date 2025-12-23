@@ -148,7 +148,7 @@ export function ContactForm() {
             <button
                 type="submit"
                 disabled={loading}
-                className="w-full px-6 py-3 mt-3 rounded-full bg-gradient-to-r from-emerald-600 to-sky-600 text-white font-semibold hover:scale-105 transition"
+                className="w-full px-6 py-4 mt-3 rounded-full bg-gradient-to-r from-emerald-600 to-sky-600 text-white font-semibold hover:scale-105 transition"
             >
                 {loading ? 'Enviando...' : 'Entrar na lista'}
             </button>
