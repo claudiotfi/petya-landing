@@ -83,14 +83,14 @@ export function ContactForm() {
   return (
     <section
       id="waiting-list"
-      className="py-16 bg-gradient-to-b from-slate-300 via-white to-slate-300"
+      className="bg-gradient-to-b from-slate-300 to-white"
     >
-      <div className="max-w-4xl mx-auto px-6 text-center">
+      <div className="max-w-4xl mx-auto text-center py-32">
 
-        <h2 className="text-3xl font-bold mb-4">Acesso antecipado ao Petya</h2>
-        <p className="text-lg text-slate-600 mb-4">
-            Cadastre-se para ser um dos primeiros a usar o Petya e nunca mais perder
-            informações importantes. Sem spam, prometemos.
+        <h2 className="text-4xl font-extrabold text-center mb-6">Acesso antecipado ao Petya</h2>
+        <p className="text-lg text-slate-600 mb-10">
+            Cadastre-se para ser um dos primeiros a usar o Petya e nunca mais perder informações importantes.
+            <br/>Sem spam, prometemos.
         </p>
 
         {showForm ? (
