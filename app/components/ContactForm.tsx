@@ -85,7 +85,7 @@ export function ContactForm() {
       id="waiting-list"
       className="bg-gradient-to-b from-slate-300 to-white"
     >
-      <div className="max-w-4xl mx-auto text-center py-32">
+      <div className="max-w-4xl mx-auto text-center py-32 px-6">
 
         <h2 className="text-4xl font-extrabold text-center mb-6">Acesso antecipado ao Petya</h2>
         <p className="text-lg text-slate-600 mb-10">
