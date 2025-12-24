@@ -16,10 +16,10 @@ export function Header() {
           </a>
           <div className="leading-tight">
             <p className="text-xl font-extrabold text-emerald-700">Petya</p>
-            <p className="text-sm text-slate-500">Saúde do seu pet</p>
+            <p className="text-sm text-slate-500 text-sm md:text-base">Saúde do seu pet</p>
           </div>
         </div>
-        <a href="#waiting-list" className="px-6 py-3 rounded-full bg-gradient-to-r from-emerald-600 to-sky-600 text-white font-semibold hover:scale-105 transition">
+        <a href="#waiting-list" className="px-6 py-3 text-center text-sm md:text-base rounded-full bg-gradient-to-r from-emerald-600 to-sky-600 text-white font-semibold hover:scale-105 transition">
           Entrar na lista
         </a>
       </div>

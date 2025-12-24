@@ -10,25 +10,33 @@ export function Features() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <Feature
-            icon={Folder}
-            title="Tudo organizado"
-            color="text-emerald-600"
-          />
-          <Feature
-            icon={Share2}
-            title="Compartilhável"
-            color="text-sky-600"
-          />
-          <Feature
-            icon={ShieldCheck}
-            title="Seguro"
-            color="text-orange-500"
-          />
-          <Feature
-            icon={Clock}
-            title="Sempre à mão"
-            color="text-indigo-600"
-          />
+          icon={Folder}
+          title="Tudo organizado"
+          description="Vacinas, exames e documentos reunidos em um único lugar."
+          color="text-emerald-600"
+        />
+
+        <Feature
+          icon={Share2}
+          title="Compartilhável"
+          description="Compartilhe o histórico com veterinários ou cuidadores quando precisar."
+          color="text-sky-600"
+        />
+
+        <Feature
+          icon={ShieldCheck}
+          title="Seguro"
+          description="Seus dados protegidos com foco em privacidade e confiabilidade."
+          color="text-orange-500"
+        />
+
+        <Feature
+          icon={Clock}
+          title="Sempre à mão"
+          description="Acesse as informações do seu pet a qualquer momento, em qualquer lugar."
+          color="text-indigo-600"
+        />
+
         </div>
       </div>
     </section>
@@ -38,10 +46,12 @@ export function Features() {
 function Feature({
   icon: Icon,
   title,
+  description,
   color,
 }: {
   icon: React.ElementType
   title: string
+  description: string
   color: string
 }) {
   return (
@@ -49,9 +59,10 @@ function Feature({
       <Icon className={`w-10 h-10 ${color} mb-4`} />
       <h3 className="font-bold text-xl mb-2">{title}</h3>
       <p className="text-slate-600">
-        Informações claras e acessíveis.
+        {description}
       </p>
     </div>
   )
 }
+
 
