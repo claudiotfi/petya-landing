@@ -18,7 +18,7 @@ export function Hero() {
             Saúde veterinária organizada
           </span>
 
-          <h1 className="text-5xl font-extrabold leading-tight mb-6">
+          <h1 className="text-3xl md:text-5xl font-extrabold leading-tight mb-6">
             O histórico de saúde do seu pet, &nbsp;
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-sky-600">
               sempre acessível
