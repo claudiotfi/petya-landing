@@ -15,7 +15,7 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body className="bg-slate-100 text-slate-900">
         {/* Background decorativo global */}
-        <div className="absolute inset-0 -z-10  bg-gradient-to-b from-slate-300 to-slate-100">
+        <div className="absolute inset-0 -z-10 bg-linear-to-b from-slate-300 to-slate-100">
           <div className="absolute top-28 w-full h-full bg-[url('/images/graph.png')] bg-top bg-repeat-x"></div>
         </div>
         {children}
