@@ -4,8 +4,8 @@
     "description": "Organize e acompanhe o histórico de saúde do seu pet em um só lugar.",
     "start_url": "/",
     "display": "browser",
-    "background_color": "#ecfdf5",
-    "theme_color": "#10b981",
+    "background_color": "#00b8a1ff",
+    "theme_color": "#ffffff",
     "orientation": "portrait",
     "icons": [
         {
