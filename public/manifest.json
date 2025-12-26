@@ -3,7 +3,7 @@
     "short_name": "Petya",
     "description": "Organize e acompanhe o histórico de saúde do seu pet em um só lugar.",
     "start_url": "/",
-    "display": "standalone",
+    "display": "browser",
     "background_color": "#ecfdf5",
     "theme_color": "#10b981",
     "orientation": "portrait",
