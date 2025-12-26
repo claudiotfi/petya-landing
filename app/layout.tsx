@@ -2,8 +2,10 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Petya — Saúde do seu pet organizada',
-  description: 'Histórico veterinário do seu pet em um só lugar',
+  title: 'Petya',
+  description: 'Organize o histórico de saúde do seu pet',
+  manifest: '/manifest.json',
+  themeColor: '#10b981',
 }
 
 export default function RootLayout({
