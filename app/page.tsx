@@ -5,6 +5,7 @@ import { Cta } from './components/Cta'
 import { Footer } from './components/Footer'
 import { HowItWorks } from './components/HowItWorks'
 import { ContactForm } from './components/ContactForm'
+import { Share } from './components/Share'
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Cta />
         <Features />
         <ContactForm />
+        <Share />
       </main>
       <Footer />
     </>
