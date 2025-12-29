@@ -25,8 +25,8 @@ export function Share() {
     return (
         <div className="flex flex-col items-center gap-4 py-32 text-center">
             <div className="flex text-center px-4 mb-4">
-                <PawPrint size={22} />
-                <span className="px-2 font-bold">
+                <PawPrint className="text-emerald-600" size={22} />
+                <span className="px-2">
                     Conhece alguém que também ama o pet como você?
                 </span>
             </div>
@@ -37,7 +37,7 @@ export function Share() {
                     px-6 py-3 rounded-full
                     text-white font-medium
                     bg-emerald-600
-                    hover:bg-emerald-600
+                    hover:bg-emerald-700
                     transition
                     cursor-pointer
                     "
