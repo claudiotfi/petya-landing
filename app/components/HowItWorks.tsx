@@ -8,31 +8,30 @@ export function HowItWorks() {
     >
       <div className="max-w-5xl mx-auto px-6 text-center">
         <h2 className="text-4xl font-extrabold mb-6">
-          Como funciona
+          Como o Petya facilita o cuidado com seu pet
         </h2>
 
         <p className="text-slate-600 max-w-2xl mx-auto mb-20 text-lg">
-          Organize o histórico de saúde do seu pet em poucos passos,
-          de forma simples e segura.
+          Em poucos passos, você organiza o histórico de saúde do seu pet e tem tudo pronto quando precisar.
         </p>
 
         <div className="grid md:grid-cols-3 gap-12">
           <Step
             icon={Cat}
             title="Cadastre seu pet"
-            text="Nome, espécie, raça e informações básicas."
+            text="Cadastre seu pet em menos de 1 minuto com as informações essenciais."
             color="text-yellow-600"
           />
           <Step
             icon={FileText}
-            title="Guarde o histórico"
-            text="Vacinas, exames e documentos organizados."
+            title="Guarde o histórico veterinário"
+            text="Guarde vacinas, exames e receitas de forma organizada e fácil de consultar."
             color="text-sky-600"
           />
           <Step
             icon={Share2}
             title="Compartilhe quando precisar"
-            text="Envie o histórico ao veterinário em segundos."
+            text="Compartilhe o histórico com o veterinário em segundos, direto do celular."
             color="text-teal-600"
           />
         </div>

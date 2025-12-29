@@ -22,18 +22,17 @@ export function Hero() {
           <h1 className="text-3xl md:text-5xl font-extrabold leading-tight mb-6">
             O histórico de saúde do seu pet, &nbsp;
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-sky-600">
-              sempre acessível
+              sempre à mão quando você precisa
             </span>
           </h1>
 
           <p className="text-xl text-slate-600 mb-10">
-            Centralize vacinas, exames, documentos e procedimentos.
-            Tenha tudo à mão em consultas ou emergências.
+            Guarde vacinas, exames e documentos do seu pet em um só lugar — e nunca mais procure informações na última hora.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <a href="#waiting-list" className="px-8 py-4 rounded-full bg-gradient-to-r from-emerald-600 to-teal-600 text-center text-white font-bold text-lg hover:scale-105 transition">
-              Quero acesso antecipado
+              Quero cuidar melhor do meu pet
             </a>
             <a
               href="#how-it-works"

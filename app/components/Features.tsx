@@ -5,35 +5,35 @@ export function Features() {
     <section className="py-32 bg-white text-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-4xl font-extrabold text-center mb-16">
-          Pensado para o cuidado contínuo
+          Pensado para o cuidado contínuo do seu pet
         </h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <Feature
           icon={Folder}
           title="Tudo organizado"
-          description="Vacinas, exames e documentos reunidos em um único lugar."
+          description="Todas as informações de saúde do seu pet organizadas em um único lugar."
           color="text-emerald-600"
         />
 
         <Feature
           icon={Share2}
           title="Compartilhável"
-          description="Compartilhe o histórico com veterinários ou cuidadores quando precisar."
+          description="Compartilhe o histórico com veterinários, hotéis ou cuidadores quando precisar."
           color="text-sky-600"
         />
 
         <Feature
           icon={ShieldCheck}
           title="Seguro"
-          description="Seus dados protegidos com foco em privacidade e confiabilidade."
+          description="Seus dados protegidos com segurança e respeito à privacidade."
           color="text-orange-500"
         />
 
         <Feature
           icon={Clock}
           title="Sempre à mão"
-          description="Acesse as informações do seu pet a qualquer momento, em qualquer lugar."
+          description="Acesse o histórico do seu pet a qualquer momento, direto do celular."
           color="text-indigo-600"
         />
 

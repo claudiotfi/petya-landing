@@ -87,9 +87,9 @@ export function ContactForm() {
     >
       <div className="max-w-4xl mx-auto text-center py-32 px-6">
 
-        <h2 className="text-4xl font-extrabold text-center mb-6">Acesso antecipado ao Petya</h2>
+        <h2 className="text-4xl font-extrabold text-center mb-6">Seja um dos primeiros a usar o Petya</h2>
         <p className="text-lg text-slate-600 mb-10">
-            Cadastre-se para ser um dos primeiros a usar o Petya e nunca mais perder informações importantes.
+            Cadastre-se para testar o Petya antes do lançamento e nunca mais perder informações importantes sobre a saúde do seu pet.
             <br/>Sem spam, prometemos.
         </p>
 
@@ -125,7 +125,7 @@ export function ContactForm() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full px-6 py-3 rounded-full border border-teal-500 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500 outline-none"
-                placeholder="seuemail@exemplo.com"
+                placeholder="Seu melhor e-mail"
                 />
             </div>
 
@@ -144,14 +144,15 @@ export function ContactForm() {
                 disabled={loading}
                 className="w-full px-6 py-4 rounded-full bg-gradient-to-r from-emerald-600 to-sky-600 text-white font-semibold hover:scale-105 transition cursor-pointer disabled:cursor-not-allowed"
             >
-                {loading ? 'Enviando...' : 'Entrar na lista'}
+                {loading ? 'Enviando...' : 'Quero acesso antecipado'}
             </button>
             </form>
         ) : (
             <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 shadow-lg text-center space-y-4">
             {success && (
                 <p className="text-green-400 text-lg font-semibold">
-                Obrigado! Sua mensagem foi enviada.
+                  Cadastro confirmado 🎉 <br />
+                  Obrigado por entrar na lista de espera do Petya.
                 </p>
             )}
 

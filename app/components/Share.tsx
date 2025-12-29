@@ -27,7 +27,7 @@ export function Share() {
             <div className="flex items-center gap-2 text-emerald-700">
                 <PawPrint size={18} />
                 <span className="text-sm font-medium">
-                    Compartilhe com alguém que também ama pets
+                    Conhece alguém que também ama o pet como você?
                 </span>
             </div>
 
