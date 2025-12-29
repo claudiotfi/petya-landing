@@ -100,7 +100,7 @@ export function ContactForm() {
             className="space-y-6"
             aria-label="Formulário de contato"
             >
-            <input type="hidden" name="_subject" value="Novo contato via site Vertex" />
+            <input type="hidden" name="_subject" value="Inscrição na lista de espera do Petya" />
 
             {/* MENSAGEM */}
             <div>
