@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 
-const ENDPOINT = 'https://formspree.io/f/xxxxxxxxxx'
+const ENDPOINT = 'https://formspree.io/f/xykylnae'
 
 export function ContactForm() {
   const formRef = useRef<HTMLFormElement | null>(null)
