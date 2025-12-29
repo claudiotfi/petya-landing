@@ -31,12 +31,12 @@ export function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            <a href="#waiting-list" className="px-8 py-4 rounded-full bg-gradient-to-r from-emerald-600 to-teal-600 text-center text-white font-bold text-lg hover:scale-105 transition">
+            <a href="#waiting-list" className="p-4 rounded-full bg-gradient-to-r from-emerald-600 to-teal-600 text-center text-white font-bold text-lg hover:scale-105 transition">
               Quero cuidar melhor do meu pet
             </a>
             <a
               href="#how-it-works"
-              className="px-8 py-4 rounded-full border border-slate-400 text-slate-700 font-semibold hover:border-sky-600 hover:text-sky-800 transition inline-flex items-center justify-center"
+              className="p-4 rounded-full border border-slate-400 text-slate-700 font-semibold hover:border-sky-600 hover:text-sky-800 transition inline-flex items-center justify-center"
             >Como funciona</a>
           </div>
         </div>
