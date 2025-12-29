@@ -106,7 +106,7 @@ export function PetHistoryMock() {
           >
             {status === 'done' ? (
               <>
-                Atualizado <Check className="w-4 h-4 ms-1" />
+                Pronto <Check className="w-4 h-4 ms-1" />
               </>
             ) : (
               <>
