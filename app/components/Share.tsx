@@ -32,15 +32,16 @@ export function Share() {
             </div>
 
             <button
-                onClick={handleShare}
                 className="
                     inline-flex items-center gap-2
                     px-6 py-3 rounded-full
                     text-white font-medium
                     bg-emerald-600
+                    hover:bg-emerald-600
                     transition
                     cursor-pointer
                     "
+                onClick={handleShare}
             >
                 <Share2 size={18} />
                 Compartilhe
