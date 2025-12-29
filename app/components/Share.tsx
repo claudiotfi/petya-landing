@@ -24,9 +24,9 @@ export function Share() {
 
     return (
         <div className="flex flex-col items-center gap-4 py-32 text-center">
-            <div className="flex items-center gap-2 text-emerald-700">
-                <PawPrint size={18} />
-                <span className="text-sm font-medium">
+            <div className="flex text-center px-4 mb-4">
+                <PawPrint size={22} />
+                <span className="font-bold">
                     Conhece alguém que também ama o pet como você?
                 </span>
             </div>
@@ -34,17 +34,16 @@ export function Share() {
             <button
                 onClick={handleShare}
                 className="
-          inline-flex items-center gap-2
-          px-6 py-3 rounded-full
-          border border-emerald-200
-          text-emerald-700 font-medium
-          hover:bg-emerald-50
-          transition
-          cursor-pointer
-        "
+                    inline-flex items-center gap-2
+                    px-6 py-3 rounded-full
+                    text-white font-medium
+                    bg-emerald-600
+                    transition
+                    cursor-pointer
+                    "
             >
                 <Share2 size={18} />
-                Compartilhar
+                Compartilhe
             </button>
         </div>
     )
