@@ -4,7 +4,7 @@ import { Share2, PawPrint } from 'lucide-react'
 
 export function Share() {
     const handleShare = async () => {
-        const url = window.location.href
+        const url = 'https://petya.com.br'
 
         if (navigator.share) {
             try {
