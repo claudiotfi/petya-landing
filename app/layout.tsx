@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
+import Head from 'next/head'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -36,8 +37,71 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage', // ✅ chave corrigida
+    name: metadata.title,
+    description: metadata.description,
+    url: 'https://petya.com.br',
+    publisher: {
+      '@type': 'Organization',
+      name: 'Petya',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://petya.com.br/android-chrome-512x512.png',
+      },
+    },
+  }
+
   return (
     <html lang="pt-BR">
+      <Head>
+        {/* Meta tags */}
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta
+          name="keywords"
+          content="pet, saúde, vacinas, exames, histórico, veterinário"
+        />
+        <link rel="canonical" href="https://petya.com.br" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content={metadata.openGraph.title} />
+        <meta
+          property="og:description"
+          content={metadata.openGraph.description}
+        />
+        <meta property="og:type" content={metadata.openGraph.type} />
+        <meta property="og:url" content={metadata.openGraph.url} />
+        <meta property="og:site_name" content={metadata.openGraph.siteName} />
+        <meta
+          property="og:image"
+          content={metadata.openGraph.images[0].url}
+        />
+        <meta
+          property="og:image:alt"
+          content={metadata.openGraph.images[0].alt}
+        />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={metadata.openGraph.title} />
+        <meta
+          name="twitter:description"
+          content={metadata.openGraph.description}
+        />
+        <meta
+          name="twitter:image"
+          content={metadata.openGraph.images[0].url}
+        />
+
+        {/* JSON-LD */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </Head>
+
       {/* Google Analytics */}
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-52FRQ0LGRM"
