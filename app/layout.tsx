@@ -8,6 +8,11 @@ export const metadata: Metadata = {
     'Guarde vacinas, exames e documentos do seu pet em um só lugar. O Petya é o histórico de saúde digital pensado para tutores e veterinários.',
   manifest: '/manifest.json',
   themeColor: '#10b981',
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
   robots: {
     index: true,
     follow: true,
